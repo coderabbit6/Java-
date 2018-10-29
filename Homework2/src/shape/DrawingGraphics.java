@@ -1,11 +1,14 @@
 package shape;
 
 public class DrawingGraphics{
+		//测试主函数
 		public static void main(String[] args) {
+			//分别创建圆，矩形，三角形对象
 			GeometricObject c = new Circle(10);
 			GeometricObject t = new Triangle(3, 4, 5);
 			GeometricObject r = new Rectangle(5, 6);
 			
+			//分别测试各个方法：toString(),面积，周长计算
 			System.out.println(c);
 			System.out.println("the area of the circle is:"+c.getArea());
 			System.out.println("the perimerter of the circle is:"+c.getPerimerter()+"\n");
@@ -20,18 +23,21 @@ public class DrawingGraphics{
 	}
 }
 
+//抽象类
 abstract class GeometricObject{
-	public abstract String toString();
-	public abstract double getArea();
-	public abstract double getPerimerter();
+	public abstract String toString();	//重写toSting
+	public abstract double getArea();	//计算面积抽象方法
+	public abstract double getPerimerter();		//计算周长抽象方法
 }
 
+//具体派生类
 class Circle extends GeometricObject{
 	private double radius;
 	public Circle(double r) {
 		this.radius = r;
 	}
 
+	//具体实现抽象方法
 	@Override
 	public double getArea() {
 		return Math.PI*radius*radius;
