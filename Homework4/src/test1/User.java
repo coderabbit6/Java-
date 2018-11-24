@@ -33,6 +33,15 @@ public class User {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		User a[] = {new User("xiaoming","shanghai"),new User("xiaohong","beijing"),
+				new User("dabai","tianjin")};
+		for(User i:a) {
+			i.setDepart("shengyang");
+		}
+		System.out.println(a[0].getName());
+		 System.out.println(a[1].getDepart());
+		 System.out.println(a[0].equals(a[1]));
 	}
+	 
 
 }
