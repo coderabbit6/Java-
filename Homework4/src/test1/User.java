@@ -2,6 +2,8 @@ package test1;
 public class User {
 	private String name;
 	private String department;
+	
+	//¹¹Ôìº¯Êı
 	User(String n,String d){
 		this.name = n;
 		this.department = d;

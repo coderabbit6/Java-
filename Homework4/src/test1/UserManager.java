@@ -31,6 +31,10 @@ public class UserManager {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		UserManager users = new UserManager();
+		User a = new User("leifeng","shenyang");
+
+		users.addUser(a);
+		
 		users.addUser(new User("xiaoming","beijing"));
 		users.addUser(new User("xiaohong","nanjing"));
 		users.addUser(new User("xiaofang","dongjing"));
@@ -39,7 +43,8 @@ public class UserManager {
 		System.out.println(users.isExist("xiaofang"));
 		System.out.println(users.isExist("xia"));
 		users.display();
-		
+		users.deleteUser(a);
+		users.display();
 		
 	}
 
